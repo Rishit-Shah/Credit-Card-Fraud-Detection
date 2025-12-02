@@ -1,11 +1,11 @@
-# 🏦 Credit Card Fraud Detection Model — EECS 4412
+# Credit Card Fraud Detection Model — EECS 4412
 
 This repository contains the full implementation, analysis, and results of our **Credit Card Fraud Detection** project completed for **EECS 4412 – Data Mining**.  
 Our objective was to build an **end-to-end machine learning pipeline** for fraud detection while handling extreme class imbalance and implementing one model **from scratch** using NumPy.
 
 ---
 
-## 🔍 Project Overview
+## Project Overview
 
 Credit card fraud detection is a highly challenging problem due to:
 
@@ -27,22 +27,22 @@ This project includes:
 
 ---
 
-## 🧠 Phase 1: Exploratory Data Analysis (EDA)
+## Phase 1: Exploratory Data Analysis (EDA)
 
 Key insights:
 
-### ✔ Class Imbalance  
+### Class Imbalance  
 Fraud represents only **0.17%** of all transactions → accuracy alone is misleading.
 
-### ✔ Amount Distribution  
+### Amount Distribution  
 - Right-skewed  
 - Most purchases are small  
 
-### ✔ Time Feature  
+### Time Feature  
 - Displays periodic patterns  
 - Potential daily cycles
 
-### ✔ PCA Features  
+### PCA Features  
 - Strong correlation blocks  
 - t-SNE reveals non-linear clusters of fraud
 
@@ -51,7 +51,7 @@ EDA was performed using:
 
 ---
 
-## 🛠️ Preprocessing Pipeline
+## Preprocessing Pipeline
 
 Our data preprocessing includes:
 
@@ -67,9 +67,9 @@ The preprocessing ensures stable gradient descent and fair model evaluation.
 
 ---
 
-## 🧮 Models Implemented
+## Models Implemented
 
-### 🔹 1. Logistic Regression (Scratch Implementation)
+### 1. Logistic Regression (Scratch Implementation)
 Implemented fully using **NumPy**, including:
 
 - Sigmoid activation  
@@ -82,21 +82,21 @@ This meets the course requirement for a model implemented *without* ML libraries
 
 ---
 
-### 🔹 2. Scikit-learn Logistic Regression
+### 2. Scikit-learn Logistic Regression
 - Includes `class_weight='balanced'`
 - Much higher recall, very low precision
 - Useful for detecting all possible fraud cases
 
 ---
 
-### 🔹 3. Random Forest Classifier
+### 3. Random Forest Classifier
 - Non-linear ensemble method  
 - Best overall model  
 - Captures interactions between PCA features
 
 ---
 
-## 📊 Results Summary
+## Results Summary
 
 | Model | Precision (Fraud) | Recall (Fraud) | F1 Score | Accuracy |
 |------|-------------------|----------------|----------|----------|
@@ -104,7 +104,7 @@ This meets the course requirement for a model implemented *without* ML libraries
 | **Sklearn Logistic Regression** | 0.06 | 0.87 | 0.11 | 98% |
 | **Random Forest Classifier** | **0.99** | **0.69** | **0.81** | **100%** |
 
-### 🏆 Best Model: **Random Forest**
+### Best Model: **Random Forest**
 Reason:
 - Handles severe imbalance  
 - Captures non-linearities  
@@ -112,7 +112,7 @@ Reason:
 
 ---
 
-## 👨‍💻 How to Run the Project
+## How to Run the Project
 
 ### Option 1 — Run in Jupyter Notebook (Recommended)
 Open: creditcardfraud.ipynb
@@ -143,7 +143,7 @@ jupyter notebook Credit_Card_Fraud.ipynb
 
 ---
 
-## 🧩 System Design (Summary)
+## System Design (Summary)
 
 ### Components:
 - Data loading module  
@@ -169,7 +169,7 @@ jupyter notebook Credit_Card_Fraud.ipynb
 
 ---
 
-## 🎯 Limitations
+## Limitations
 
 - No SMOTE or oversampling  
 - Limited hyperparameter tuning  
@@ -178,7 +178,7 @@ jupyter notebook Credit_Card_Fraud.ipynb
 
 ---
 
-## 🚀 Future Work
+## Future Work
 
 - SMOTE / ADASYN oversampling  
 - Cost-sensitive learning  
@@ -188,7 +188,7 @@ jupyter notebook Credit_Card_Fraud.ipynb
 
 ---
 
-## 👥 Team
+## Team
 
 **Rishit Shah**  
 - EDA visualizations, scaling, duplicate removal  
@@ -204,13 +204,13 @@ jupyter notebook Credit_Card_Fraud.ipynb
 
 ---
 
-## 📜 License
+## License
 This project is for academic purposes under York University EECS 4412.  
 Reuse requires instructor permission.
 
 ---
 
-## 🙏 Acknowledgements
+## Acknowledgements
 
 - Kaggle Credit Card Fraud Detection Dataset  
 - Scikit-learn  
